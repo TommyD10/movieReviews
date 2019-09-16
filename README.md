@@ -1,7 +1,7 @@
 # movieReviews
 Info Site about movies
 
-- visibility
+![Movie review site](drafts/movieReview.jpg "")
 
 - Hintergrundbid für den Hauptinhalt:
 Für Hintergrundbilder kann man keine Transparenz festlegen. Deshalb müssen wir mit **opacity** für Container arbeiten. Wir erzeugen also mit **:after** ein virtuelles Element, das wir mit opacity durchsichtig machen. Für dieses Element definieren wir das Hintergrundbild.
