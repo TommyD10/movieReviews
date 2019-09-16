@@ -23,13 +23,33 @@ Info Site about movies
 
 ###### Mixin definieren
 ```scss
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@mixin name {
+  property: value;
 }
 ```
 ###### Mixin verwenden
 ```scss
 @include reset-list
+```
+###### Mixin mit parametern
+```scss
+@mixin name($parameter) {
+  property: $parameter;
+}
+```
+###### Mixin mit parametern verwenden
+```scss
+@include name(value)
+```
+###### Scrollleiste hinzufügen
+```css
+overflow: scroll;
+```
+###### Überstehenden Inhalt abschneiden
+```css
+overflow: hidden;
+```
+###### Nur wenn Inhalt größer als Container, Scrollleiste anzeigen
+```css
+overflow: auto;
 ```
