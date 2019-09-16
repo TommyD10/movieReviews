@@ -12,13 +12,15 @@ Für Hintergrundbilder kann man keine Transparenz festlegen. Deshalb müssen wir
 - **Text-Shadow** für Hauptüberschrift
 - **Box-Shadow** für Container mit Hauptinhalt
 - Aufteilung der Bereiche mit **flex-box**
+- kein float benutzen
 - Scrollleiste mit **overflow: scroll** oder **overflow: auto**
 - In Menü-Elementen zu lange Texte mit **overflow: hidden** abschneiden
 - In Menü-Elementen Worttrennung mit **whitespace** und **overflow-wrap** kontrollieren
 - Pfeil für Menü-Elemente mit **:after** hinzufügen
-- Bonus: **Media-Query** für einspaltige Darstellung auf mobile
 
-- kein float benutzen
+### Bonus
+- **Media-Query** für einspaltige Darstellung auf mobile
+
 
 ## Hilfe
 ###### Mixin definieren
