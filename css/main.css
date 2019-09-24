@@ -1,0 +1,263 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  border: 1px solid gray;
+  width: 80%;
+  height: 86vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 120px;
+}
+
+.container::after {
+  content: "";
+  background: url("../images/peaky.jpg");
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.container .movie-review {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .movie-review .movie-text {
+  font-family: "Roboto Mono", monospace;
+}
+
+.container .movie-review .movie-rate {
+  height: 400px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .movie-review .movie-rate .movie-star {
+  height: 0;
+  width: 0;
+  margin: 7.5px 0;
+  position: relative;
+  display: block;
+  color: rgba(238, 255, 0, 0);
+  border-right: 15px solid transparent;
+  border-bottom: 10.5px solid rgba(238, 255, 0, 0);
+  border-left: 15px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.container .movie-review .movie-rate .movie-star:before {
+  height: 0;
+  width: 0;
+  border-bottom: 12px solid rgba(238, 255, 0, 0);
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  position: absolute;
+  top: -6.75px;
+  left: -9.75px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.container .movie-review .movie-rate .movie-star:after {
+  position: absolute;
+  display: block;
+  color: rgba(238, 255, 0, 0);
+  top: 0.3px;
+  left: -15.75px;
+  height: 0;
+  width: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 10.5px solid rgba(238, 255, 0, 0);
+  border-left: 15px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  content: '';
+}
+
+.container .movie-review .movie-rate .movie-star-full {
+  height: 0;
+  width: 0;
+  margin: 7.5px 0;
+  position: relative;
+  display: block;
+  color: #eeff00;
+  border-right: 15px solid transparent;
+  border-bottom: 10.5px solid #eeff00;
+  border-left: 15px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.container .movie-review .movie-rate .movie-star-full:before {
+  height: 0;
+  width: 0;
+  border-bottom: 12px solid #eeff00;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  position: absolute;
+  top: -6.75px;
+  left: -9.75px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.container .movie-review .movie-rate .movie-star-full:after {
+  position: absolute;
+  display: block;
+  color: #eeff00;
+  top: 0.3px;
+  left: -15.75px;
+  height: 0;
+  width: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 10.5px solid #eeff00;
+  border-left: 15px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  content: '';
+}
+
+.container .movie-poster {
+  width: 300px;
+  background-image: url(../images/peaky_poster.jpg);
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  overflow: auto;
+  background-color: #746f6f;
+  width: 20%;
+  height: 100vh;
+  border: 4px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sidebar .side-movie {
+  border: 1px solid gray;
+  height: 200px;
+  font-family: "Roboto Mono", monospace;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: space pre;
+  word-wrap: break-word;
+}
+
+.sidebar .side-movie .movie-side-rate {
+  width: 60%;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.sidebar .side-movie .movie-side-rate .movie-side-star {
+  height: 15px;
+  width: 100%;
+  height: 0;
+  width: 0;
+  margin: 3.5px 0;
+  position: relative;
+  display: block;
+  color: #fafa00;
+  border-right: 7px solid transparent;
+  border-bottom: 4.9px solid #fafa00;
+  border-left: 7px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.sidebar .side-movie .movie-side-rate .movie-side-star:before {
+  height: 0;
+  width: 0;
+  border-bottom: 5.6px solid #fafa00;
+  border-left: 2.1px solid transparent;
+  border-right: 2.1px solid transparent;
+  position: absolute;
+  top: -3.15px;
+  left: -4.55px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.sidebar .side-movie .movie-side-rate .movie-side-star:after {
+  position: absolute;
+  display: block;
+  color: #fafa00;
+  top: 0.14px;
+  left: -7.35px;
+  height: 0;
+  width: 0;
+  border-right: 7px solid transparent;
+  border-bottom: 4.9px solid #fafa00;
+  border-left: 7px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  content: '';
+}
+
+.sidebar .side-movie p {
+  height: 75px;
+  overflow: hidden;
+  font-size: 11px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .sidebar {
+    width: 30%;
+  }
+  .container .movie-review {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

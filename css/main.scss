@@ -1,0 +1,130 @@
+@import "mixin.scss";
+@import "variables.scss";
+
+body{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0px;
+    
+}
+
+.container{
+   
+    @include container-opacity("../images/peaky.jpg", .3);
+    border: 1px solid $border-color;
+    width: 80%;
+    height:86vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 120px;
+
+    .movie-review{
+        width:500px;
+        display: flex;
+        flex-direction: column;
+        
+
+        .movie-text{
+            font-family: $font;
+        }
+
+        .movie-rate{
+            height: 400px;
+            width: 400px;
+            display: flex;
+
+            .movie-star {
+                @include star(rgba(238, 255, 0, 0));
+            }
+        
+            .movie-star-full {
+                @include star;
+            }
+            
+
+            
+
+        }
+        
+    }
+
+    .movie-poster{
+        width:300px;
+        background-image: url(../images/peaky_poster.jpg);
+        background-repeat: no-repeat;
+
+    }
+}
+
+.sidebar{
+    @include sidebar-scroll;
+    background-color: $background-sidebar;
+    width: 20%;
+    height: 100vh;
+    border: 4px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    
+    .side-movie{
+    
+    border: 1px solid $border-color;
+    height: 200px;
+    font-family: $font;
+    box-sizing: border-box;
+    white-space: space pre;
+    word-wrap: break-word;
+    
+
+        .movie-side-rate{
+            width: 60%;
+            height: 15px;
+            display: flex;
+            justify-content: flex-start;
+            padding:10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            
+
+
+            .movie-side-star{
+                height: 15px;
+                width: 100%;
+                
+                @include star(rgb(250,250,0), 7px);
+            }
+
+            
+        }
+   
+
+    p{
+        height: 75px;
+        overflow: hidden;
+        font-size: 11px;
+
+    }
+   
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+    .sidebar{
+        width:30%;
+    }
+
+    .container{
+    .movie-review{
+        padding:20px;
+    }
+
+    .movie-poster{
+        
+        
+    }
+}
+
+}

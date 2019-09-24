@@ -1,0 +1,34 @@
+{
+  "name": "moviereviews",
+  "version": "1.0.0",
+  "description": "Best Movies",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch css/main.scss css/main.css",
+    "devserver": "live-server",
+    "test": "npm-run-all --parallel sass devserver",
+    "create:scss": "mkdir scss && touch scss/styles.scss && mkdir css",
+    "create:html": "touch index.html",
+    "create": "npm run create:scss && create:html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TommyD10/movieReviews.git"
+  },
+  "keywords": [
+    "Movies"
+  ],
+  "author": "Tommy Dumancic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TommyD10/movieReviews/issues"
+  },
+  "homepage": "https://github.com/TommyD10/movieReviews#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.22.12"
+  }
+}

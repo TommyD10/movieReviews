@@ -1,0 +1,68 @@
+@mixin container-opacity($image, $opacity) {
+    
+    display:block;
+    position: relative;
+
+    &::after{
+        content: "";
+        background:url($image);
+        background-size: cover;
+        opacity:$opacity;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        position:absolute;
+        z-index: -1;
+    }
+    
+}
+
+@mixin zeroSize {
+    height: 0;
+    width: 0;
+    
+}
+
+@mixin star($color:rgb(238, 255, 0,), $size:15px) {
+    @include zeroSize;
+    margin: $size/2 0;
+    position: relative;
+    display: block;
+    color: $color;
+    border-right: $size solid transparent;
+    border-bottom: $size/100*70 solid $color;
+    border-left: $size solid transparent;
+    transform: rotate(35deg);
+    &:before {
+        @include zeroSize;
+        border-bottom: $size/100*80 solid $color;
+        border-left: $size/100*30 solid transparent;
+        border-right: $size/100*30 solid transparent;
+        position: absolute;
+        top: -$size/100*45;
+        left: -$size/100*65;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        color: $color;
+        top: $size/100*2;
+        left: -$size/100*105;
+        @include zeroSize;
+        border-right: $size solid transparent;
+        border-bottom: $size/100*70 solid $color;
+        border-left: $size solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+    }
+ }
+
+
+@mixin sidebar-scroll{
+    overflow: auto;
+    
+}
