@@ -1,5 +1,5 @@
 # movieReviews
-Info Site about movies
+Info Site about movies - PRACTICE TUTORIAL
 
 ![Movie review site](drafts/movieReview.jpg "")
 
